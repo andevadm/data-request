@@ -1,0 +1,17 @@
+.DataContainer {
+	// block
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	// text
+	color: grey;
+
+	div {
+		// block
+		width: 90%;
+		// text
+		text-align: center;
+	}
+
+}

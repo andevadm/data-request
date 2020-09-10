@@ -1,14 +1,16 @@
 import React from 'react';
-import './App.scss';
 
-function App() {
+import './App.scss';
+import Header from './Header';
+import Footer from './Footer';
+import DataContainer from './DataContainer';
+
+export default function App() {
   return (
     <div className="App">
-      <div>
-        The app is under development
-      </div>
+      <Header />
+      <DataContainer />
+      <Footer />
     </div>
   );
 }
-
-export default App;
