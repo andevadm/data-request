@@ -1,0 +1,17 @@
+.App {
+	// block
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	// text
+	font: 2em sans-serif;
+	color: steelblue;
+
+	div {
+		// block
+		width: 90%;
+		// text
+		text-align: center;
+	}
+}
