@@ -1,0 +1,41 @@
+@import 'Variables';
+
+.DataTable {
+	// block
+	width: 80%;
+	margin: 0 auto;
+
+	h2 {
+		// block
+		padding: 20px;
+		// text
+		color: $primary-dark;
+	}
+
+	table {
+		width: 100%;
+		border: 2px solid $primary-dark;
+		border-collapse: collapse;
+	}
+
+	.request-time {
+		// block
+		padding: 20px;
+		// text
+		color: $secondary-dark;
+	}
+
+}
+
+.DataTableItem {
+	// block
+
+	// text
+	font-size: 1em;
+
+	td {
+		border: 1px solid lightgrey;
+		padding: 10px;
+	}
+
+}

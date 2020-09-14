@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './App.scss';
+import '../styles/App.scss';
 import Header from './Header';
 import Footer from './Footer';
 import DataContainer from './DataContainer';

@@ -1,0 +1,92 @@
+@import 'Variables';
+
+.DataContainer {
+	// flex
+	display: flex;
+	align-items: stretch;
+  	flex-flow: row wrap;
+  	// block
+	min-height: $container-min-height;
+
+	// column sizes: sum (widths + margins) = 100%
+
+	.column {
+		// block
+		padding: 10px;
+
+		&:hover {
+			background-color: whitesmoke;
+		}
+	}
+
+	// left or top
+	.left {
+		// flex
+		flex: 2 1 auto;
+		display: flex;
+		justify-content: center;
+  		align-items: flex-start;
+		// block
+		width: auto;
+		background: #fff3;
+	}
+
+	// center
+	.center {
+		// flex
+		flex: 4 1 auto;
+		display: flex;
+  		justify-content: center;
+  		align-items: flex-start;
+		// block
+		width: auto;
+		background: transparent;
+	}
+
+	// right or bottom
+	.right {
+		// flex
+		flex: 4 1 auto;
+		display: flex;
+		justify-content: center;
+  		align-items: flex-start;
+		// block
+		width: auto;
+		background: #fff3;
+	}
+
+}
+
+// responsive for middle screens
+@media screen and (max-width: $media-breakpoint-lg) {
+
+	.DataContainer {
+
+		.left {
+			flex: 2;
+		}
+		.center {
+			flex: 3;
+		}
+		.right {
+			flex: 1 1 100vw;
+		}
+
+	}
+
+}
+
+// responsive for small screens
+@media screen and (max-width: $media-breakpoint-sm) {
+
+	.DataContainer {
+
+		flex-direction: column;
+
+		.left, .right {
+			flex: 1 1 auto;
+		}
+
+	}
+
+}

@@ -1,0 +1,36 @@
+@import 'Variables';
+
+.App {
+	// block
+	min-height: 100vh;
+	min-width: 300px;
+	// text
+	color: #090a0a;
+
+	a {
+		color: $primary-dark;
+	}
+
+	h1 {
+		// text
+		font-size: 2em;
+		color: $primary-dark;
+		text-align: left;
+	}
+
+	h2 {
+		// text
+		font-size: 1.2em;
+	}
+
+}
+
+@media screen and (max-width: $media-breakpoint-sm) {
+
+	.App {
+		h1 {
+			font-size: 1.6em;
+		}
+	}
+
+}

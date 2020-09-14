@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 
-div, span, p, footer, header, main {
+html, body, div, span, p, footer, header, h1, h2 {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -14,6 +14,14 @@ div, span, p, footer, header, main {
 	background: transparent;
 }
 
-footer, header, main {
+html {
+	font: 18px sans-serif;;
+}
+
+body {
+	background-color: white;
+}
+
+footer, header {
 	display: block;
 }

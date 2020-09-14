@@ -1,0 +1,37 @@
+@import 'Variables';
+
+.DataRequest {
+	// block
+	width: 80%;
+	margin: 0 auto;
+
+	h2 {
+		// block
+		background-color: $primary-light;
+		border-radius: 10px 10px 0 0;
+		padding: 20px;
+		// text
+		color: $secondary-dark;
+	}
+
+	form {
+		// block
+		border-radius: 0 0 10px 10px;
+		background-color: $secondary-light;
+		padding: 20px;
+	}
+
+	button {
+		// block
+		display: block;
+		background-color: $primary-dark;
+		border-radius: 10px;
+		padding: 20px 40px;
+		margin: 20px auto;
+		// text
+		font-size: 1rem;
+		color: white;
+		text-transform: uppercase;
+	}
+
+}

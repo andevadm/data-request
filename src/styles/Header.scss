@@ -1,0 +1,31 @@
+@import 'Variables';
+
+.Header {
+	// flex
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  	flex-flow: row wrap;
+	// block
+	min-height: (100vh - $container-min-height)/2;
+	padding: 20px 40px;
+	// text
+	font-size: 1em;
+	text-align: center;
+
+	&:hover {
+		background-color: whitesmoke;
+	}
+
+	& > * {
+		// block
+		padding: 20px 30px;
+	}
+
+	p {
+		// text
+		font-size: 1.2em;
+		text-align: left;
+	}
+
+}

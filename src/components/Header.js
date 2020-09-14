@@ -1,10 +1,15 @@
 import React from 'react';
-import './Header.scss';
+import '../styles/Header.scss';
 
 export default function Header() {
   return (
-    <div className="Header">
-      Header
-    </div>
+    <header className="Header">
+      <h1>
+      	Data Request App
+      </h1>
+      <p>
+      	Simple SPA created with React
+      </p>
+    </header>
   );
 }

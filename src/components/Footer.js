@@ -1,10 +1,11 @@
 import React from 'react';
-import './Footer.scss';
+import '../styles/Footer.scss';
 
 export default function Footer() {
   return (
-    <div className="Footer">
-      Footer
-    </div>
+    <footer className="Footer">
+      Source files are located in&nbsp;  
+	  <a href="https://github.com/andevadm/data-request">GitHub repository</a>
+    </footer>
   );
 }

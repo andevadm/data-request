@@ -1,0 +1,37 @@
+@import 'Variables';
+
+.DataDetails {
+	// block
+	width: 80%;
+	border-radius: 10px;
+	margin: 0 auto;
+
+	h2 {
+		// block
+		padding: 20px;
+		// text
+		color: $secondary-dark;
+	}
+
+	img {
+		width: 100%;
+	}
+
+	.item-body {
+		// block
+		padding: 20px;
+	}
+
+	.item-description {
+		// block
+		padding: 20px 0;
+	}
+
+	.item-value {
+		// text
+		color: $primary-dark;
+		text-align: center;
+	}
+
+
+}
