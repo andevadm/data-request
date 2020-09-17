@@ -2,8 +2,7 @@
 
 .DataTable {
 	// block
-	width: 80%;
-	margin: 0 auto;
+	width: 100%;
 
 	h2 {
 		// block
@@ -18,11 +17,19 @@
 		border-collapse: collapse;
 	}
 
-	.request-time {
+	.request-parameters {
 		// block
 		padding: 20px;
 		// text
 		color: $secondary-dark;
+
+		p {
+			padding-bottom: 20px;
+		}
+
+		em {
+			
+		}
 	}
 
 }
@@ -32,6 +39,16 @@
 
 	// text
 	font-size: 1em;
+	// effects
+	cursor: pointer;
+
+	&:hover {
+		background-color: #ddd4;
+	}
+
+	&.selected {
+		background-color: $primary-light;
+	}
 
 	td {
 		border: 1px solid lightgrey;

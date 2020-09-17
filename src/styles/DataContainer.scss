@@ -12,46 +12,40 @@
 
 	.column {
 		// block
-		padding: 10px;
-
-		&:hover {
-			background-color: whitesmoke;
-		}
+		padding: 10px 20px;
+		min-width: 280px;
 	}
 
 	// left or top
 	.left {
 		// flex
-		flex: 2 1 auto;
+		flex: 1;
 		display: flex;
 		justify-content: center;
   		align-items: flex-start;
 		// block
-		width: auto;
 		background: #fff3;
 	}
 
 	// center
 	.center {
 		// flex
-		flex: 4 1 auto;
+		flex: 1;
 		display: flex;
   		justify-content: center;
   		align-items: flex-start;
 		// block
-		width: auto;
 		background: transparent;
 	}
 
 	// right or bottom
 	.right {
 		// flex
-		flex: 4 1 auto;
+		flex: 1;
 		display: flex;
 		justify-content: center;
   		align-items: flex-start;
 		// block
-		width: auto;
 		background: #fff3;
 	}
 
