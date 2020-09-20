@@ -20,13 +20,34 @@
 		padding: 20px;
 	}
 
+	label {
+		// block
+		display: block;
+		padding: 10px 0;
+
+		&:last-child {
+			text-align: center;
+		}
+
+	}
+
+	select {
+		// block
+		display: block;
+		width: 100%;
+		padding: 10px;
+		margin: 10px 0;
+		// text
+		font-size: 1rem;
+	}
+
 	button {
 		// block
 		display: block;
 		background-color: $primary-dark;
 		border-radius: 10px;
 		padding: 20px 40px;
-		margin: 20px auto;
+		margin: 10px auto;
 		// text
 		font-size: 1rem;
 		color: white;

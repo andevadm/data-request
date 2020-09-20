@@ -1,55 +1,55 @@
 [
 	{
-		"id": "1",
+		"id": 1,
 		"name": "Silicon",
 		"image": "silicon.jpg",
 		"description": "A hard, brittle crystalline solid with a blue-grey metallic lustre. A tetravalent metalloid and semiconductor.",
 		"density": 2.329
 	},
 	{
-		"id": "2",
+		"id": 2,
 		"name": "Graphite",
 		"image": "graphite.jpg",
 		"description": "A crystalline form of the element carbon with its atoms arranged in a hexagonal structure.",
 		"density": 2.267
 	},
 	{
-		"id": "3",
+		"id": 3,
 		"name": "Copper",
 		"image": "copper.jpg",
 		"description": "A soft, malleable, and ductile metal with very high thermal and electrical conductivity.",
 		"density": 8.96
 	},
 	{
-		"id": "4",
+		"id": 4,
 		"name": "Aluminium",
 		"image": "aluminium.jpg",
 		"description": "A silvery-white, soft, non-magnetic and ductile metal in the boron group.",
 		"density": 2.7
 	},
 	{
-		"id": "5",
+		"id": 5,
 		"name": "Titanium",
 		"image": "titanium.jpg",
 		"description": "A lustrous transition metal with a silver color, low density, and high strength.",
 		"density": 4.506
 	},
 	{
-		"id": "6",
+		"id": 6,
 		"name": "Polystyrene",
 		"image": "polystyrene.jpg",
 		"description": "A synthetic aromatic hydrocarbon polymer, one of the most widely used plastics.",
 		"density": 0.96
 	},
 	{
-		"id": "7",
+		"id": 7,
 		"name": "Rubber",
 		"image": "rubber.jpg",
 		"description": "A compound of isoprene polymers, with minor impurities of other organic compounds and water.",
 		"density": 1.522
 	},
 	{
-		"id": "8",
+		"id": 8,
 		"name": "Glass",
 		"image": "glass.jpg",
 		"description": "A non-crystalline, often transparent amorphous solid, usually formed by rapid cooling of the molten form.",
