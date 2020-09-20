@@ -1,22 +1,23 @@
 ## Data Requests
 
 Simple SPA created with React.
-The app contains a form requesting data by AJAX methods. Data is saved in files on a server.
+The app contains a form requesting data by AJAX methods and a table for the obtained respond. Data is saved in files on a server. 
 
 ### Basic page components
 
-- The form with selection of request method and submit button.
-- The block presenting the data list in response.
-- The block showing details of the data item selected in the list.
+- The form with selection of request method and data source.
+- The block presenting obtained data table and parameters of the request.
+- The block showing details of data item selected in the table.
 
 ### Request methods
 
-- XMLHttpRequest (under development)
-- Fetch (under development)
-- Axios library (under development)
+- Fetch
+- XMLHttpRequest
+- Methods of Axios and jQuery libraries (not implemented for now)
 
 ### Data formats
 
-- XML (under development)
-- JSON (under development)
+- JSON
+- XML
+
 
