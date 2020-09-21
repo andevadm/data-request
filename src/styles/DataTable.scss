@@ -1,3 +1,6 @@
+/*   DataTable.scss   */
+/* styles for DataTable and DataTableItem */
+
 @import 'Variables';
 
 .DataTable {
@@ -19,16 +22,18 @@
 
 	.request-parameters {
 		// block
-		padding: 20px;
+		border-left: 2px solid $secondary-dark;
+		margin-top: 30px;
+		padding-top: 5px;
+		padding-left: 20px;
 		// text
-		color: $secondary-dark;
 
 		p {
-			padding-bottom: 20px;
+			padding-bottom: 5px;
 		}
 
 		em {
-			
+
 		}
 	}
 
@@ -36,23 +41,29 @@
 
 .DataTableItem {
 	// block
-
+	background-color: white;
 	// text
 	font-size: 1em;
 	// effects
 	cursor: pointer;
+	transition: all 0.25s;
 
 	&:hover {
-		background-color: #ddd4;
+		background-color: #aaa3;
 	}
 
 	&.selected {
+		color: $secondary-dark;
 		background-color: $primary-light;
 	}
 
 	td {
-		border: 1px solid lightgrey;
+		border: 1px solid #ddd;
+		background-color: $secondary-light;
 		padding: 10px;
+		&:first-child {
+			width: 3em;
+		}
 	}
 
 }

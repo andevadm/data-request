@@ -1,11 +1,14 @@
+/* DataContainer.scss */
+/* flex column layout */
+
 @import 'Variables';
 
 .DataContainer {
 	// flex
 	display: flex;
 	align-items: stretch;
-  	flex-flow: row wrap;
-  	// block
+  flex-flow: row wrap;
+  // block
 	min-height: $container-min-height;
 
 	// column sizes: sum (widths + margins) = 100%
@@ -20,20 +23,14 @@
 	.left {
 		// flex
 		flex: 1;
-		display: flex;
-		justify-content: center;
-  		align-items: flex-start;
 		// block
-		background: #fff3;
+		background: transparent;
 	}
 
 	// center
 	.center {
 		// flex
 		flex: 1;
-		display: flex;
-  		justify-content: center;
-  		align-items: flex-start;
 		// block
 		background: transparent;
 	}
@@ -42,11 +39,8 @@
 	.right {
 		// flex
 		flex: 1;
-		display: flex;
-		justify-content: center;
-  		align-items: flex-start;
 		// block
-		background: #fff3;
+		background: transparent;
 	}
 
 }

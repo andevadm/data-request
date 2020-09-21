@@ -1,3 +1,6 @@
+/*       DataContainer.js          */
+/* layout and state root component */
+
 import React, { useState } from 'react';
 
 import '../styles/DataContainer.scss';

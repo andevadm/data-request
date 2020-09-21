@@ -1,3 +1,7 @@
+/*   DataTable.js   */
+/* component with obtained data and parameters of response */
+/* component with table item */
+
 import React from 'react';
 import '../styles/DataTable.scss';
 

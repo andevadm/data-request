@@ -1,4 +1,7 @@
-/* Normalization */
+/*          index.scss         */
+/* normalization and root font */
+
+@import 'Variables';
 
 * {
 	box-sizing: border-box;
@@ -15,10 +18,11 @@ html, body, div, span, p, footer, header, h1, h2 {
 }
 
 html {
-	font: 18px sans-serif;;
+	font: $root-font-size sans-serif;
 }
 
 body {
+	color: #090a0a;
 	background-color: white;
 }
 

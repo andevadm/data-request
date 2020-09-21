@@ -1,3 +1,5 @@
+/*     DataRequest.scss     */
+
 @import 'Variables';
 
 .DataRequest {
@@ -35,10 +37,23 @@
 		// block
 		display: block;
 		width: 100%;
+		border: 1px solid $secondary-dark;
+		border-radius: 5px;
 		padding: 10px;
 		margin: 10px 0;
 		// text
 		font-size: 1rem;
+		// effects
+		cursor: pointer;
+		outline: none;
+		&:focus  {
+			border-color: $primary-dark;
+			box-shadow: 0 0 0 1px $primary-dark;
+		}
+		&[disabled] {
+			cursor: initial;
+			border-color: #aaa;
+		}
 	}
 
 	button {
@@ -54,6 +69,11 @@
 		text-transform: uppercase;
 		// effects
 		cursor: pointer;
+		opacity: 0.85;
+		transition: all 0.5s;
+		&:hover {
+			opacity: 1;
+		}
 	}
 
 }

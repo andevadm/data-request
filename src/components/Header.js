@@ -1,3 +1,6 @@
+/*    Header.js     */
+/* header component */
+
 import React from 'react';
 import '../styles/Header.scss';
 

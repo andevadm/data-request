@@ -1,3 +1,6 @@
+/*    Footer.js     */
+/* footer component */
+
 import React from 'react';
 import '../styles/Footer.scss';
 

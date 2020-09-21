@@ -1,11 +1,12 @@
+/*     App.scss      */
+/* headers and links */
+
 @import 'Variables';
 
 .App {
 	// block
 	min-height: 100vh;
 	min-width: 300px;
-	// text
-	color: #090a0a;
 
 	a {
 		color: $primary-dark;
