@@ -1,0 +1,79 @@
+/*     DataRequest.scss     */
+
+@import 'Variables';
+
+.DataRequest {
+	// block
+	width: 100%;
+
+	h2 {
+		// block
+		background-color: $primary-light;
+		border-radius: 10px 10px 0 0;
+		padding: 20px;
+		// text
+		color: $secondary-dark;
+	}
+
+	form {
+		// block
+		border-radius: 0 0 10px 10px;
+		background-color: $secondary-light;
+		padding: 20px;
+	}
+
+	label {
+		// block
+		display: block;
+		padding: 10px 0;
+
+		&:last-child {
+			text-align: center;
+		}
+
+	}
+
+	select {
+		// block
+		display: block;
+		width: 100%;
+		border: 1px solid $secondary-dark;
+		border-radius: 5px;
+		padding: 10px;
+		margin: 10px 0;
+		// text
+		font-size: 1rem;
+		// effects
+		cursor: pointer;
+		outline: none;
+		&:focus  {
+			border-color: $primary-dark;
+			box-shadow: 0 0 0 1px $primary-dark;
+		}
+		&[disabled] {
+			cursor: initial;
+			border-color: #aaa;
+		}
+	}
+
+	button {
+		// block
+		display: block;
+		background-color: $primary-dark;
+		border-radius: 10px;
+		padding: 20px 40px;
+		margin: 10px auto;
+		// text
+		font-size: 1rem;
+		color: white;
+		text-transform: uppercase;
+		// effects
+		cursor: pointer;
+		opacity: 0.85;
+		transition: all 0.5s;
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+}

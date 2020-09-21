@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<materials>
+
+	<item id="1">
+		<name>
+			Silicon
+		</name>
+		<image src="silicon.jpg" />
+		<description>
+			A hard, brittle crystalline solid with a blue-grey metallic lustre. A tetravalent metalloid and semiconductor.
+		</description>
+		<density units="g/cm3">
+			2.329
+		</density>
+	</item>
+
+	<item id="2">
+		<name>
+			Graphite
+		</name>
+		<image src="graphite.jpg" />
+		<description>
+			A crystalline form of the element carbon with its atoms arranged in a hexagonal structure.
+		</description>
+		<density units="g/cm3">
+			2.267
+		</density>
+	</item>
+
+	<item id="3">
+		<name>
+			Copper
+		</name>
+		<image src="copper.jpg" />
+		<description>
+			A soft, malleable, and ductile metal with very high thermal and electrical conductivity.
+		</description>
+		<density units="g/cm3">
+			8.96
+		</density>
+	</item>
+
+	<item id="4">
+		<name>
+			Aluminium
+		</name>
+		<image src="aluminium.jpg" />
+		<description>
+			A silvery-white, soft, non-magnetic and ductile metal in the boron group.
+		</description>
+		<density units="g/cm3">
+			2.7
+		</density>
+	</item>
+
+	<item id="5">
+		<name>
+			Titanium
+		</name>
+		<image src="titanium.jpg" />
+		<description>
+			A lustrous transition metal with a silver color, low density, and high strength.
+		</description>
+		<density units="g/cm3">
+			4.506
+		</density>
+	</item>
+
+	<item id="6">
+		<name>
+			Polystyrene
+		</name>
+		<image src="polystyrene.jpg" />
+		<description>
+			A synthetic aromatic hydrocarbon polymer, one of the most widely used plastics.
+		</description>
+		<density units="g/cm3">
+			0.96
+		</density>
+	</item>
+
+	<item id="7">
+		<name>
+			Rubber
+		</name>
+		<image src="rubber.jpg" />
+		<description>
+			A compound of isoprene polymers, with minor impurities of other organic compounds and water.
+		</description>
+		<density units="g/cm3">
+			1.522
+		</density>
+	</item>
+
+	<item id="8">
+		<name>
+			Glass
+		</name>
+		<image src="glass.jpg" />
+		<description>
+			A non-crystalline, often transparent amorphous solid, usually formed by rapid cooling of the molten form.
+		</description>
+		<density units="g/cm3">
+			2.5
+		</density>
+	</item>
+
+</materials>

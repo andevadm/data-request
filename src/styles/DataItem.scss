@@ -1,0 +1,92 @@
+/*     DataItem.scss     */
+/* changes layout for middle screens */
+
+@import 'Variables';
+
+.DataItem {
+	// flex
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	// block
+	width: 100%;
+	background-color: $primary-light;
+
+	h2 {
+		// block
+		width: 100%;
+		padding: 20px;
+		// text
+		color: $secondary-dark;
+	}
+
+	.item-image {
+		img {
+			display: block;
+			width: 100%;
+			max-width: 640px;
+			margin: 0 auto;
+		}
+	}
+
+	.item-body {
+
+	}
+
+	.item-description {
+		// block
+		background-color: $secondary-dark;
+		padding: 20px;
+		// text
+		color: white;
+	}
+
+	.item-value {
+		// block
+		padding: 20px;
+		// text
+		color: $secondary-dark;
+		text-align: center;
+	}
+
+
+}
+
+// responsive for middle screens
+@media screen and (max-width: $media-breakpoint-lg) {
+
+	.DataItem {
+		flex-direction: row;
+
+		.item-image {
+			width: 50%;
+			border-left: 1px solid $primary-light;
+			border-bottom: 1px solid $primary-light;
+		}
+
+		.item-body {
+			width: 50%;
+		}
+
+	}
+
+}
+
+// responsive for small screens
+@media screen and (max-width: $media-breakpoint-sm) {
+
+	.DataItem {
+		flex-direction: column;
+
+		.item-image {
+			width: 100%;
+			border: none;
+		}
+
+		.item-body {
+			width: 100%;
+		}
+
+	}
+
+}

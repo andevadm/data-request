@@ -1,0 +1,13 @@
+/*    Footer.scss     */
+
+@import 'Variables';
+
+.Footer {
+	// block
+	min-height: (100vh - $container-min-height)/2;
+	padding: 4vh;
+	// text
+	font-size: 1em;
+	text-align: center;
+
+}

@@ -1,14 +1,19 @@
-import React from 'react';
-import './App.scss';
+/*     App.js     */
+/* root component */
 
-function App() {
+import React from 'react';
+
+import '../styles/App.scss';
+import Header from './Header';
+import Footer from './Footer';
+import DataContainer from './DataContainer';
+
+export default function App() {
   return (
     <div className="App">
-      <div>
-        The app is under development
-      </div>
+      <Header />
+      <DataContainer />
+      <Footer />
     </div>
   );
 }
-
-export default App;

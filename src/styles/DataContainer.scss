@@ -1,0 +1,80 @@
+/* DataContainer.scss */
+/* flex column layout */
+
+@import 'Variables';
+
+.DataContainer {
+	// flex
+	display: flex;
+	align-items: stretch;
+  flex-flow: row wrap;
+  // block
+	min-height: $container-min-height;
+
+	// column sizes: sum (widths + margins) = 100%
+
+	.column {
+		// block
+		padding: 10px 20px;
+		min-width: 280px;
+	}
+
+	// left or top
+	.left {
+		// flex
+		flex: 1;
+		// block
+		background: transparent;
+	}
+
+	// center
+	.center {
+		// flex
+		flex: 1;
+		// block
+		background: transparent;
+	}
+
+	// right or bottom
+	.right {
+		// flex
+		flex: 1;
+		// block
+		background: transparent;
+	}
+
+}
+
+// responsive for middle screens
+@media screen and (max-width: $media-breakpoint-lg) {
+
+	.DataContainer {
+
+		.left {
+			flex: 2;
+		}
+		.center {
+			flex: 3;
+		}
+		.right {
+			flex: 1 1 100vw;
+		}
+
+	}
+
+}
+
+// responsive for small screens
+@media screen and (max-width: $media-breakpoint-sm) {
+
+	.DataContainer {
+
+		flex-direction: column;
+
+		.left, .right {
+			flex: 1 1 auto;
+		}
+
+	}
+
+}
