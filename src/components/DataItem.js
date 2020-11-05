@@ -12,17 +12,26 @@ export default function DataItem({item}) {
       	<h2>No item is selected</h2> :
       	<>
 			    <h2>
-			      {item.name}
+			      {item.name || "No name"}
 			    </h2>
 			    <div className="item-image">
-						<img src={ process.env.PUBLIC_URL + "/data/img/" + item.image } alt={item.name} />
+						{ 
+							(item.image) ?
+							<img src={ process.env.PUBLIC_URL + "/data/img/" + item.image } alt={item.name} /> :
+							"No image"
+						}
 					</div>
 					<div className="item-body">
 					  <div className="item-description">
-					    {item.description}
+					    {item.description || "No description"}
 					  </div>
 					  <div className="item-value">
-					    Density: <em>{item.density}&nbsp;g/cm<sup>3</sup></em>
+					    Density:  
+								{ 
+									(item.density) ?
+									<em> {item.density}&nbsp;g/cm<sup>3</sup></em> :
+									<em> no value</em>
+								}
 					  </div>
 					</div>
 				</>
