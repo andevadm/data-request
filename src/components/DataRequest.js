@@ -25,7 +25,7 @@ export default function DataRequest({handleRequest}) {
       <h2>
       	Data Request Form
       </h2>
-      <form>
+      <form onSubmit={event => event.preventDefault()}>
         <label>
           Data source:
           <select id="database" value={dataSource} readOnly disabled>

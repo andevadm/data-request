@@ -41,7 +41,7 @@ test("DataItem renders obtained item correctly", () => {
   expect(container.querySelector(".item-value").textContent).toBe(
     "Density: 1.5\xa0g/cm3"
   );
-  // alternative test - snapsot
+  // alternative test - snapshot
   expect(pretty(container.innerHTML)).toMatchInlineSnapshot(`
     "<div class=\\"DataItem\\">
       <h2>itemName</h2>
@@ -70,7 +70,7 @@ test("DataItem renders item with empty fields correctly", () => {
   expect(container.querySelector(".item-value").textContent).toBe(
     "Density: no value"
   );
-  // alternative test - snapsot
+  // alternative test - snapshot
   expect(pretty(container.innerHTML)).toMatchInlineSnapshot(`
     "<div class=\\"DataItem\\">
       <h2>No name</h2>
@@ -92,7 +92,7 @@ test("DataItem without props is rendered correctly", () => {
   expect(container.querySelector(".item-image")).toBeNull();
   expect(container.querySelector(".item-description")).toBeNull();
   expect(container.querySelector(".item-value")).toBeNull();
-  // alternative test - snapsot
+  // alternative test - snapshot
   expect(pretty(container.innerHTML)).toMatchInlineSnapshot(`
     "<div class=\\"DataItem\\">
       <h2>No item is selected</h2>
