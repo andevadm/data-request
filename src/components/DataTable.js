@@ -1,6 +1,5 @@
 /*   DataTable.js   */
 /* component with obtained data and parameters of response */
-/* component with table item */
 
 import React from 'react';
 import '../styles/DataTable.scss';
@@ -33,7 +32,7 @@ export default function DataTable({dataArray, requestParameters, handleSelect}) 
   return (
     <div className="DataTable">
       {
-        (dataArray.length === 0) ? 
+        (!dataArray || dataArray.length === 0) ? 
           <h2>Data is not obtained</h2> :
           <>
             <h2>
@@ -49,15 +48,21 @@ export default function DataTable({dataArray, requestParameters, handleSelect}) 
               </tbody>        
             </table>
             <div className="request-parameters">
-              <p>
-                Get method: <em>{requestParameters.method}</em>
-              </p>
-              <p>
-                Data extension: <em style={{ textTransform: 'uppercase' }}>{requestParameters.extension}</em>
-              </p>
-              <p>
-                Time of data processing: <em>{requestParameters.time}&nbsp;ms</em>
-              </p>
+              {
+                (!requestParameters || typeof requestParameters !== 'object') ? 
+                  <p>Request parameters are unknown</p> :
+                  <>
+                    <p className="request-parameters-method">
+                      Get method: <em>{ requestParameters.method || 'Unknown'}</em>
+                    </p>
+                    <p className="request-parameters-extension">
+                      Data extension: <em style={{ textTransform: 'uppercase' }}> { requestParameters.extension || 'Unknown'}</em>
+                    </p>
+                    <p className="request-parameters-time">
+                      Time of data processing: <em>{ requestParameters.time || '0'}&nbsp;ms</em>
+                    </p>
+                  </>
+              }
             </div>
           </>
       }
@@ -65,11 +70,17 @@ export default function DataTable({dataArray, requestParameters, handleSelect}) 
   );
 }
 
-function DataTableItem({item}) {
-  return (
-    <tr className="DataTableItem">
-      <td>{item.id}</td>
-      <td>{item.name}</td>
-    </tr>
-  );
+/* component with the table item */
+export function DataTableItem({item}) {
+  if (item && item.id) {
+    return (
+      <tr className="DataTableItem">
+        <td className="item-id">{item.id}</td>
+        <td className="item-name">{item.name || "No name"}</td>
+      </tr>
+    )
+  } else {
+    console.log('Item of DataTable is empty or has no id');
+    return (<></>)
+  }
 }
