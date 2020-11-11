@@ -7,6 +7,7 @@ import '../styles/DataContainer.scss';
 import DataRequest from './DataRequest';
 import DataTable from './DataTable';
 import DataItem from './DataItem';
+import { getFetch, getXMLHttp } from '../api/getData';
 
 export default function DataContainer() {
 
@@ -21,113 +22,7 @@ export default function DataContainer() {
         method: 'Fetch', // AJAX method
         extension: 'json' // extension of data file on a server
       }
-    )
-
-  // get data by XMLHttpRequest from URL in dataPath
-  function getXMLHttp(dataPath, extension) {
-    let dataString, dataXML;
-    const startTime = Date.now();
-    try {
-      let request = new XMLHttpRequest();
-      // old method using onreadystatechange event is selected 
-      request.onreadystatechange = function() {
-        if (this.readyState === 4 && this.status === 200) {
-          console.log('XMLHttpRequest is ready');
-          switch (extension) {
-            case 'json':
-              dataString = this.responseText;
-              processJSON(dataString);
-              break;
-            case 'xml':
-              dataXML = this.responseXML;
-              processXML(dataXML);
-              break;
-            default:
-              console.log('Error in data extension for XMLHttpRequest');
-          }        
-          setRequestParameters({ 
-              time: Date.now() - startTime, 
-              method: 'XMLHttpRequest',
-              extension: extension 
-          });
-        }
-      }
-      request.open("GET", dataPath, true);
-      request.send();
-    } catch {
-      console.log('Error within XMLHttpRequest');
-    }
-  }
-
-  // get data by Fetch from URL in dataPath
-  async function getFetch(dataPath, extension) {
-    let dataString, dataXML;
-    const startTime = Date.now();
-    try {
-      let response = await fetch(dataPath);
-      if (response.ok) {
-        console.log('Fetch response is ready');
-        // response.json is not used to apply the same data processing functions for all request methods
-        dataString = await response.text();
-        switch (extension) {
-          case 'json':
-            processJSON(dataString);
-            break;
-          case 'xml':                       
-            dataXML = (new DOMParser()).parseFromString(dataString,"text/xml");
-            processXML(dataXML);
-            break;
-          default:
-            console.log('Error in data extension for Fetch request');
-        }      
-        setRequestParameters({ 
-            time: Date.now() - startTime, 
-            method: 'Fetch',
-            extension: extension 
-        });
-      }
-    } catch {
-      console.log('Error within Fetch request');
-    }
-  }
-
-  // get array from JSON string and set data state
-  function processJSON(dataString) {
-    try {
-      setData( JSON.parse(dataString) );
-      console.log('JSON data is processed successfully');
-    } catch {
-      console.log('Error in the obtained JSON data');
-    }  
-  }
-
-  // get array from XML object and set data state
-  function processXML(dataXML) {
-    try {
-      let dataArray = [];
-      for (let item of dataXML.getElementsByTagName("item")) {
-        let dataItem = {}; // item of data array
-        dataItem.id = +item.getAttribute('id');
-        for (let property of item.children) {
-          const propertyTag = property.tagName;
-          if ( propertyTag === 'image' ) {
-            dataItem[propertyTag] = property.getAttribute('src');
-            continue;
-          }
-          dataItem[propertyTag] = property.textContent.trim();
-          // transform numeric values to float number type
-          if ( !isNaN(dataItem[propertyTag]) ) {
-            dataItem[propertyTag] = parseFloat(dataItem[propertyTag]);
-          }
-        }
-        dataArray.push(dataItem);
-      }
-      setData(dataArray);
-      console.log('XML data is processed successfully');
-    } catch {
-      console.log('Error in the obtained XML data');
-    }  
-  }
+    );
 
   // handler for a click on request button
   // dataSource - data filename without extension
@@ -139,17 +34,24 @@ export default function DataContainer() {
     const dataPath = process.env.PUBLIC_URL + "/data/" + dataFileName;
     switch (method) {
       case 'XMLHttpRequest': 
-        getXMLHttp(dataPath, extension); 
+        getXMLHttp(dataPath, extension, stateCallback);
         break;
       case 'Fetch': 
-        getFetch(dataPath, extension);
+        getFetch(dataPath, extension).then(stateCallback);
         break;
       default:
-        console.log('Error in selection of request method');
+        console.log('handleRequest: request method is not supported');
     };
     console.log('--- ' + (new Date()).toLocaleTimeString() + ' - New request ---');
     console.log('Selected method: ' + method);
-    console.log('Selected data: ' + dataFileName);   
+    console.log('Selected data: ' + dataFileName);
+  }
+
+  // callback setting state according to result of the request
+  const stateCallback = (requestResult) => {
+    //console.log('stateCallback data: ' + JSON.stringify(requestResult));
+    setData(requestResult.data);
+    setRequestParameters(requestResult.parameters);
   }
 
   // handler for selecting item in the data table
