@@ -7,6 +7,7 @@ export function processJSON(dataString) {
     return JSON.parse(dataString);
   } catch {
     console.log('processJSON: error in the obtained JSON data');
+    return [];
   }  
 }
 
@@ -34,5 +35,6 @@ export function processXML(dataXML) {
     return dataArray;
   } catch {
     console.log('processXML: error in the obtained XML data');
+    return [];
   }  
 }

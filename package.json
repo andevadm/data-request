@@ -36,7 +36,7 @@
   },
   "jest": {
     "coverageReporters": ["html"],
-    "collectCoverageFrom": ["**/src/components/*.{js,jsx}"]
+    "collectCoverageFrom": ["**/src/components/*.{js,jsx}", "**/src/api/*.{js,jsx}"]
   },
   "devDependencies": {
     "gh-pages": "^3.1.0",

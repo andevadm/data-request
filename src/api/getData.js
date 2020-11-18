@@ -37,6 +37,7 @@ export async function getFetch(dataPath, extension) {
     }
   } catch {
     console.log('getFetch: error within request');
+    return Promise.resolve([]);
   }
 }
 

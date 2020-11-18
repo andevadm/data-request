@@ -44,7 +44,7 @@ export default function DataContainer() {
     };
     console.log('--- ' + (new Date()).toLocaleTimeString() + ' - New request ---');
     console.log('Selected method: ' + method);
-    console.log('Selected data: ' + dataFileName);
+    console.log('Selected data: ' + dataPath);
   }
 
   // callback setting state according to result of the request
